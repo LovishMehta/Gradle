@@ -1,0 +1,20 @@
+Build tools: Build tools are software applications that help in build automation.
+
+What is build automation?
+The process of automating a wide variety of tasks that are required by software developers to build the application like:
+- Compiling source code
+- Packaging into binary code
+- Manage required libraries(dependencies)
+- Running automated tests
+- Deployment
+- Notification/emails
+
+Some common Build Tools
+Apache Ant  - came in 2000
+Apache Maven- came in 2004
+Gradle      - came in 2007
+Grunt
+
+What is Gradle
+Gradle is an open-source build automation tool.
+Gradle build scripts are written using a Groovy or kotlin DSL
