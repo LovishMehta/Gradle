@@ -18,3 +18,32 @@ Grunt
 What is Gradle
 Gradle is an open-source build automation tool.
 Gradle build scripts are written using a Groovy or kotlin DSL
+
+It helps to maintain dependencies. Dependencies are nothing but a module or library that is being used by our project. If gralde wasn't there
+we would have to add jar files of the modules and libraries to our project target folder manually but gradle automates the whole process.
+We just need to mention the dependency in the build.gradle file.
+
+Fixed Build Phases
+Initialization - Set environment and identify projects
+Configuration - Construct Task DAG (Directed Acyclic Graph) and identify order of execution
+Execution - Run task
+
+Different type of dependencies
+Forget Gradle for a moment. When you’re building and running a Java project there are two classpaths involved:
+
+Compile classpath – this is a list of dependencies that are required for the JDK to be able to compile Java code into .class files
+Runtime classpath – this list of dependencies is required to actually run the compiled Java code
+When we’re configuring Gradle dependencies all we’re really doing is configuring which dependencies should appear on which classpath.
+Given there are only two classpaths, it makes sense that we have three options to declare our dependencies.
+
+- compileOnly – put the dependency on the compile classpath only
+- runtimeOnly – put the dependency on the runtime classpath only
+- implementation – put the dependency on both classpaths
+
+Q) Why would you care so much about a dependency being only on a specific classpath? 
+Well, a few benefits include: faster compilation if the compile classpath contains fewer dependencies.
+when writing code you won’t accidentally use a class that’s from a dependency that should only appear on the runtime classpath
+cleaner classpaths reduce complexity
+
+Similary we have test Dependency configurations
+testRuntime, testImpementation, testCompile
